@@ -7,18 +7,58 @@ body {
 .gridster {
   position: relative;
   bottom: 55px;
-  right: 40px;
 }
 
 ul {
   list-style: none;
 }
 
-h1 {
-  font-size: 48px;
+.title-h1 {
+  position: relative;
+  top: 40px;
+  font-size: 56px;
+}
+
+.market-cap-h1,
+.volume-h1,
+.pe-ratio-h1,
+.price-h1,
+.chat-h1 {
+  position: relative;
+  top: 50px;
+  font-size: 36px;
+}
+
+.chat-h1 {
+  color: black;
+}
+
+.market-cap-value,
+.pe-ratio-value,
+.price-value {
+  position: relative;
+  top: 20px;
+  font-size: 62px;
+  overflow: hidden;
+}
+
+.volume-value {
+  position: relative;
+  top: 60px;
+  font-size: 42px;
+  overflow: hidden;
+}
+
+h6 {
+  position: relative;
+  top: 30px;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 input {
+  position: relative;
+  top: 30px;
   width: 120px;
   height: 50px;
   font-size: 24px;
@@ -28,7 +68,8 @@ input {
 .market-cap,
 .volume,
 .pe-ratio,
-.price {
+.price,
+.chat {
   position: absolute;
   color: white;
   text-align: center;
@@ -52,7 +93,11 @@ input {
 }
 
 .price {
-  background-color: #dc5945;
+  background-color: #f1c40f;
+}
+
+.chat {
+  background-color: white;
 }
 
 
