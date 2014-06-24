@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.gridster {
+  position: relative;
+  bottom: 55px;
+  right: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+input {
+  width: 120px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.title,
+.market-cap,
+.volume,
+.pe-ratio,
+.price {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+}
+
+.title {
+  background-color: #ec663c;
+}
+
+.market-cap {
+  background-color: #47bbb3;
+}
+
+.volume {
+  background-color: #9c4274;
+}
+
+.pe-ratio {
+  background-color: #19b5fe;
+}
+
+.price {
+  background-color: #dc5945;
+}
+
+
+
