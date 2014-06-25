@@ -4,10 +4,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-/*.gridster {
+.gridster {
   position: relative;
   bottom: 55px;
-}*/
+}
 
 ul {
   list-style: none;
