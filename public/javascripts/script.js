@@ -68,6 +68,7 @@ $(function() {
   $('.title-form').on('submit', function(e) {
     e.preventDefault();
     symbol = $('.title-input').val();
+    $('.title-input').val('');
     $('.title-input').blur();
   });
   //   } else {

@@ -20,11 +20,16 @@ ul {
 }
 
 .market-cap-h1,
-.pe-ratio-h1,
-.price-h1 {
+.pe-ratio-h1 {
   position: relative;
   top: 50px;
   font-size: 36px;
+}
+
+.price-h1 {
+  position: relative;
+  bottom: 310px;
+  font-size: 28px;
 }
 
 .chat-h1 {
