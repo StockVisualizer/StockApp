@@ -3,7 +3,7 @@ var data = [];
 $(function() {
   gridster = $('.gridster > ul').gridster({
     widget_margins: [5, 5],
-    widget_base_dimensions: [280, 310],
+    widget_base_dimensions: [300, 320],
     avoid_overlapped_widgets: true
   }).data('gridster');
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
@@ -36,7 +36,7 @@ $(function() {
   } else {
     window.columns = 2;
   }
-  $('.gridster').width(290 * window.columns);
+  $('.gridster').width(310 * window.columns);
   symbol = "AAPL";
   time = new Date().toString();
   day = time.substr(0, 3);
