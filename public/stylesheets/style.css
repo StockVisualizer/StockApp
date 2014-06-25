@@ -5,8 +5,8 @@ body {
 }
 
 .gridster {
-  position: relative;
-  bottom: 55px;
+  margin: 0px auto;
+
 }
 
 ul {

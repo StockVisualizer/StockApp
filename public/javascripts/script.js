@@ -28,15 +28,15 @@ $(function() {
   var gauge = new Gauge(target).setOptions(opts);
   gauge.maxValue = 100000000;
   gauge.animationSpeed = 32;
-  // var width = $(window).width();
-  // if (width >= 1200) {
-  //   window.columns = 4;
-  // } else if (width >= 992 && width < 1200) {
-  //   window.columns = 3;
-  // } else {
-  //   window.columns = 2;
-  // }
-  // $('.gridster').width(290 * window.columns);
+  var width = $(window).width();
+  if (width >= 1200) {
+    window.columns = 4;
+  } else if (width >= 992 && width < 1200) {
+    window.columns = 3;
+  } else {
+    window.columns = 2;
+  }
+  $('.gridster').width(290 * window.columns);
   symbol = "AAPL";
   time = new Date().toString();
   day = time.substr(0, 3);
@@ -129,7 +129,7 @@ $(function() {
       color: "black"
     }
   });
-  var updateInterval = 100;
+  var updateInterval = 1000;
   function update() {
     plot.setData([getPrice()]);
     plot.draw();
