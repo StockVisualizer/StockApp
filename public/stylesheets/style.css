@@ -2,7 +2,10 @@ body {
   background-color: black;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 12px;
+}
+
+#container {
+  padding-top: 5px;
 }
 
 .gridster {
@@ -143,7 +146,7 @@ h6 {
 .graph {
   box-sizing: border-box;
   width: 610px;
-  height: 320px;
+  height: 360px;
   border: 1px solid gray;
   background: #000;
 }

@@ -3,7 +3,7 @@ var data = [];
 $(function() {
   gridster = $('.gridster > ul').gridster({
     widget_margins: [5, 5],
-    widget_base_dimensions: [300, 320],
+    widget_base_dimensions: [300, 360],
     avoid_overlapped_widgets: true
   }).data('gridster');
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
