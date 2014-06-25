@@ -3,26 +3,29 @@ extends layout
 block content
   div(class="gridster")
     ul
-      li(class="title", data-row="1", data-col="1", data-sizex="2", data-sizey="1")
+      li(class="title", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
         h1(class="title-h1") Apple Inc.
         form(class="title-form")
-          input(class="title-input" type="text" autocomplete="off" placeholder="e.g. AAPL")
+          input(class="title-input" type="text" autocomplete="off" autocorrect="off" autofocus="true" placeholder="GOOG")
         h6 Protip: You can drag the widgets around!
         h4(class="market-status")
+      li(class="price", data-row="1", data-col="1", data-sizex="2", data-sizey="1")
+        //- h3(class="price-value")
+        div(class="graph")
+          div(class="data")
+          h1(class="price-h1") Price
+      li(class="chat", data-row="1", data-col="1", data-sizex="1", data-sizey="2")
+        h1(class="chat-h1") TraderChat
+        form(class="message-form")
+          input(id="message-input", autocomplete="off", placeholder="Apple is up 6% today!")
+        ul(id="messages")
       li(class="market-cap", data-row="1", data-col="2", data-sizex="1", data-sizey="1")
         h1(class="market-cap-h1") Market Cap
         h3(class="market-cap-value")
       li(class="volume", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
         h1(class="volume-h1") Volume
         h3(class="volume-value")
+        canvas(id="volume-gauge")
       li(class="pe-ratio", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
         h1(class="pe-ratio-h1") PE Ratio
         h3(class="pe-ratio-value")
-      li(class="price", data-row="1", data-col="1", data-sizex="2", data-sizey="1")
-        h1(class="price-h1") Price
-        h3(class="price-value")
-      li(class="chat", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
-        h1(class="chat-h1") Chat
-        ul(id="messages")
-          form(class="message-form")
-            input(id="message-input", autocomplete="off")
