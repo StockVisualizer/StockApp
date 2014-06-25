@@ -22,14 +22,14 @@ ul {
 .market-cap-h1,
 .volume-h1,
 .pe-ratio-h1,
-.price-h1,
-.chat-h1 {
+.price-h1 {
   position: relative;
   top: 50px;
   font-size: 36px;
 }
 
 .chat-h1 {
+  font-size: 24px;
   color: black;
 }
 
@@ -56,7 +56,7 @@ h6 {
   font-weight: normal;
 }
 
-input {
+.title-input {
   position: relative;
   top: 30px;
   width: 120px;
@@ -98,6 +98,36 @@ input {
 
 .chat {
   background-color: white;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.message-form {
+  padding: 3px;
+}
+
+#message-input {
+  padding: 10px;
+  width: 90%;
+  height: 5px;
+  font-size: 12px;
+  position: relative;
+  top: 200px;
+}
+
+#messages > li {
+  padding: 5px 10px;
+  color: black;
+  font-size: 12px;
+  text-align: left
+}
+
+#messages > li:nth-child(odd) {
+  background: #eee; 
 }
 
 
