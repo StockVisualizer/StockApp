@@ -1,36 +1,44 @@
 body {
   background-color: black;
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+#container {
+  padding-top: 5px;
 }
 
 .gridster {
-  position: relative;
-  bottom: 55px;
+  margin: 0px auto;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .title-h1 {
   position: relative;
   top: 40px;
-  font-size: 56px;
+  font-size: 42px;
 }
 
 .market-cap-h1,
-.volume-h1,
-.pe-ratio-h1,
-.price-h1 {
+.pe-ratio-h1 {
   position: relative;
   top: 50px;
   font-size: 36px;
 }
 
+.price-h1 {
+  position: relative;
+  bottom: 350px;
+  font-size: 28px;
+}
+
 .chat-h1 {
   font-size: 24px;
-  color: black;
 }
 
 .market-cap-value,
@@ -42,10 +50,16 @@ ul {
   overflow: hidden;
 }
 
+.volume-h1 {
+  position: relative;
+  top: 10px;
+  font-size: 36px;
+}
+
 .volume-value {
   position: relative;
-  top: 60px;
-  font-size: 42px;
+  top: 30px;
+  font-size: 24px;
   overflow: hidden;
 }
 
@@ -56,12 +70,17 @@ h6 {
   font-weight: normal;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 .title-input {
   position: relative;
   top: 30px;
   width: 120px;
   height: 50px;
   font-size: 24px;
+  text-transform: uppercase;
 }
 
 .title,
@@ -98,6 +117,8 @@ h6 {
 
 .chat {
   background-color: white;
+  color: black;
+  overflow: scroll;
 }
 
 #messages {
@@ -106,29 +127,38 @@ h6 {
   padding: 0;
 }
 
-.message-form {
-  padding: 3px;
-}
-
 #message-input {
-  padding: 10px;
   width: 90%;
-  height: 5px;
+  height: 20px;
   font-size: 12px;
   position: relative;
-  top: 200px;
+  bottom: 20px;
 }
 
 #messages > li {
   padding: 5px 10px;
-  color: black;
+  margin-top: 2px;
   font-size: 12px;
-  text-align: left
+  text-align: left;
+  background-color: #e74c3c;
+  color: white;
 }
 
 #messages > li:nth-child(odd) {
-  background: #eee; 
+  background: blue;
 }
 
+.graph {
+  box-sizing: border-box;
+  width: 610px;
+  height: 360px;
+  border: 1px solid gray;
+  background: #000;
+}
 
-
+.data {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.2em;
+}
