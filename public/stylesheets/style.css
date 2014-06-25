@@ -70,6 +70,10 @@ h6 {
   font-weight: normal;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 .title-input {
   position: relative;
   top: 30px;
