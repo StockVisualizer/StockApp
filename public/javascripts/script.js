@@ -5,6 +5,9 @@ $(function() {
     widget_base_dimensions: [280, 360],
     avoid_overlapped_widgets: true
   }).data('gridster');
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    $(".gridster ul").gridster().data('gridster').draggable().disable();
+  }
   symbol = "AAPL";
   time = new Date().toString();
   day = time.substr(0, 3);
