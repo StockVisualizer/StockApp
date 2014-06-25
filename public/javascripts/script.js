@@ -69,7 +69,7 @@ $(function() {
     e.preventDefault();
     symbol = $('.title-input').val();
     $('.title-input').val('');
-    $('.title-input').blur();
+    // $('.title-input').blur();
   });
   //   } else {
   //     $(".market-status").html("Market is closed");
@@ -81,7 +81,7 @@ $(function() {
   $('.message-form').on('submit', function() {
     socket.emit('chat message', $('#message-input').val());
     $('#message-input').val('');
-    $('#message-input').blur();
+    // $('#message-input').blur();
     return false;
   });
   socket.on('chat message', function(msg) {
