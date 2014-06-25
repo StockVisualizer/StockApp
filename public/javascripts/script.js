@@ -51,7 +51,9 @@ $(function() {
   $('.message-form').on('submit', function(){
     socket.emit('chat message', $('#message-input').val());
     $('#message-input').val('');
-    $('#message-input').blur();
+    if (/iPhone|iPod|/i.test(navigator.userAgent)) {
+      $('#message-input').blur();
+    }
     return false;
   });
   socket.on('chat message', function(msg){
