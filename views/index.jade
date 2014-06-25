@@ -15,14 +15,17 @@ block content
       li(class="volume", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
         h1(class="volume-h1") Volume
         h3(class="volume-value")
+        canvas(id="volume-gauge")
       li(class="pe-ratio", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
         h1(class="pe-ratio-h1") PE Ratio
         h3(class="pe-ratio-value")
       li(class="price", data-row="1", data-col="1", data-sizex="2", data-sizey="1")
-        h1(class="price-h1") Price
-        h3(class="price-value")
+        //- h1(class="price-h1") Price
+        //- h3(class="price-value")
+        div(class="graph")
+          div(class="data")
       li(class="chat", data-row="1", data-col="1", data-sizex="1", data-sizey="1")
-        h1(class="chat-h1") Chat
+        h1(class="chat-h1") StockChat
+        form(class="message-form")
+          input(id="message-input", autocomplete="off")
         ul(id="messages")
-          form(class="message-form")
-            input(id="message-input", autocomplete="off")

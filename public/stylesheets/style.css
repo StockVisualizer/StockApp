@@ -20,7 +20,6 @@ ul {
 }
 
 .market-cap-h1,
-.volume-h1,
 .pe-ratio-h1,
 .price-h1 {
   position: relative;
@@ -30,7 +29,6 @@ ul {
 
 .chat-h1 {
   font-size: 24px;
-  color: black;
 }
 
 .market-cap-value,
@@ -42,10 +40,16 @@ ul {
   overflow: hidden;
 }
 
+.volume-h1 {
+  position: relative;
+  top: 10px;
+  font-size: 36px;
+}
+
 .volume-value {
   position: relative;
-  top: 60px;
-  font-size: 42px;
+  top: 30px;
+  font-size: 24px;
   overflow: hidden;
 }
 
@@ -98,6 +102,8 @@ h6 {
 
 .chat {
   background-color: white;
+  color: black;
+  overflow: scroll;
 }
 
 #messages {
@@ -106,29 +112,38 @@ h6 {
   padding: 0;
 }
 
-.message-form {
-  padding: 3px;
-}
-
 #message-input {
-  padding: 10px;
   width: 90%;
-  height: 5px;
+  height: 20px;
   font-size: 12px;
   position: relative;
-  top: 200px;
+  bottom: 20px;
 }
 
 #messages > li {
   padding: 5px 10px;
-  color: black;
+  margin-top: 2px;
   font-size: 12px;
-  text-align: left
+  text-align: left;
+  background-color: #e74c3c;
+  color: white;
 }
 
 #messages > li:nth-child(odd) {
-  background: #eee; 
+  background: blue;
 }
 
+.graph {
+  box-sizing: border-box;
+  width: 570px;
+  height: 310px;
+  border: 1px solid gray;
+  background: #000;
+}
 
-
+.data {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.2em;
+}
