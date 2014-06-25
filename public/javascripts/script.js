@@ -69,7 +69,9 @@ $(function() {
     e.preventDefault();
     symbol = $('.title-input').val();
     $('.title-input').val('');
-    // $('.title-input').blur();
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      $('.title-input').blur();
+    }
   });
   //   } else {
   //     $(".market-status").html("Market is closed");
