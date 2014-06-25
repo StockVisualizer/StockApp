@@ -8,6 +8,15 @@ $(function() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     $(".gridster ul").gridster().data('gridster').draggable().disable();
   }
+  var width = $(window).width();
+  if (width >= 1200) {
+    window.columns = 4;
+  } else if (width >= 992 && width < 1200) {
+    window.columns = 3;
+  } else {
+    window.columns = 2;
+  }
+  $('.gridster').width(290 * window.columns);
   symbol = "AAPL";
   time = new Date().toString();
   day = time.substr(0, 3);
