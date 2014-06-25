@@ -56,7 +56,7 @@ h6 {
   font-weight: normal;
 }
 
-input {
+.title-input {
   position: relative;
   top: 30px;
   width: 120px;
@@ -122,8 +122,9 @@ input {
 #messages > li {
   padding: 5px 10px;
   color: black;
+  font-size: 12px;
+  text-align: left
 }
-
 
 #messages > li:nth-child(odd) {
   background: #eee; 

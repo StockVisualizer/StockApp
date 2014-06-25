@@ -33,9 +33,9 @@ $(function() {
           $('.title-h1').html(company_name);
         });
       }, 1000);
-      $('form').on('submit', function(e) {
+      $('.title-form').on('submit', function(e) {
         e.preventDefault();
-        symbol = $('input').val();
+        symbol = $('.title-input').val();
       });
     } else {
       $(".market-status").html("Market is closed");
@@ -53,3 +53,11 @@ $(function() {
     $('#messages').append($('<li>').text(msg));
   });
 });
+
+
+
+
+
+
+
+
