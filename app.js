@@ -1,15 +1,26 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('static-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+/* 
+express - Importing the package and making it accessible in the app through the variable called express
+path - Helper package that allows you to tell the app about certain directories 
+favicon - Helper package to incorporate a favicon in the app (acts as middleware)
+logger - Logs statements of server activity in the console (e.g. request, response)
+cookieParser - Parses the cookie header field from the browser (populates the req.cookies field)
+bodyParser - Parses the body field from the browser (populates the req.body field with the value of the POST parameters)
+routes - Includes the routes/index file in the app (the .js extension for index is optional)
+app - Creates a new instance of express called app
+*/
+var express = require('express'),
+    path = require('path'),
+    favicon = require('static-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    routes = require('./routes/index'),
+    app = express();
 
-var routes = require('./routes/index');
-
-var app = express();
-
-// view engine setup
+/* 
+Utilizes the path package to make views = StockApp/views
+Sets jade as an available template for views 
+*/
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
