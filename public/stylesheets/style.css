@@ -219,7 +219,6 @@ li:hover {
   box-sizing: border-box;
   width: 610px;
   height: 360px;
-  border: 1px solid gray;
   background: #fbb44c;
   font-weight: bold;
 }
