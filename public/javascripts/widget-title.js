@@ -1,3 +1,9 @@
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    $(".close").style.display = 'none';
+    $(".close1").style.display = 'none';
+    $(".close2").style.display = 'none';
+    $(".close3").style.display = 'none';
+}
 $(function() {
   var client = new ZeroClipboard($(".copy-button"));
 
