@@ -16,7 +16,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
     app = express();
-
+    
 /* 
 Utilizes the path package to make views = StockApp/views
 Sets jade as an available template for views 
