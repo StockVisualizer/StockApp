@@ -7,6 +7,19 @@ $(function() {
     });
   });
 
+  $('.close').on('click', function(e) {
+    e.preventDefault();
+    this.parentNode.style.display = 'none';
+  });
+  $('.close1').on('click', function(e) {
+    e.preventDefault();
+    this.parentNode.style.display = 'none';
+  });
+  $('.close2').on('click', function(e) {
+    e.preventDefault();
+    this.parentNode.style.display = 'none';
+  });
+
   $('.title-form').on('submit', function(e) {
     e.preventDefault();
     symbol = $('.title-input').val();
