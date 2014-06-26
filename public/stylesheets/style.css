@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Helvetica Neue', sans-serif;
   margin: 0;
 }
 
@@ -21,53 +21,59 @@ ul {
 .title-h1 {
   position: relative;
   top: 40px;
-  font-size: 42px;
+  font-size: 72px;
+  opacity: 0.5;
+}
+
+.updated {
+  font-size: 16px;
+  position: relative;
+  top: 20px;
+}
+
+.market-status {
+  position: relative;
+  top: 50px;
+  font-size: 18px;
 }
 
 .market-cap-h1,
 .pe-ratio-h1 {
-  position: relative;
-  top: 50px;
-  font-size: 36px;
+  font-size: 48px;
+  opacity: 0.7;
 }
 
 .price-h1 {
   position: relative;
-  bottom: 350px;
-  font-size: 28px;
+  bottom: 360px;
+  font-size: 48px;
+  opacity: 0.7;
 }
 
 .chat-h1 {
-  font-size: 36px;
+  font-size: 48px;
+  opacity: 0.7;
 }
 
 .market-cap-value,
-.pe-ratio-value,
-.price-value {
+.pe-ratio-value {
   position: relative;
-  top: 20px;
-  font-size: 62px;
+  bottom: 20px;
+  right: 5px;
+  font-size: 72px;
   overflow: hidden;
 }
 
 .volume-h1 {
-  position: relative;
-  top: 10px;
-  font-size: 36px;
+  font-size: 48px;
+  opacity: 0.7;
 }
 
 .volume-value {
   position: relative;
-  top: 30px;
-  font-size: 24px;
+  top: 20px;
+  font-size: 36px;
   overflow: hidden;
-}
-
-h6 {
-  position: relative;
-  top: 30px;
-  font-size: 14px;
-  font-weight: normal;
 }
 
 li:hover {
@@ -76,11 +82,12 @@ li:hover {
 
 .title-input {
   position: relative;
-  top: 30px;
+  top: 20px;
   width: 120px;
   height: 50px;
   font-size: 24px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .title,
@@ -96,28 +103,28 @@ li:hover {
 }
 
 .title {
-  background-color: #ec663c;
+  background-color: #3a98d8;
 }
 
 .market-cap {
-  background-color: #47bbb3;
+  background-color: #2abb9b;
 }
 
 .volume {
-  background-color: #9c4274;
+  background-color: #a76dbf;
 }
 
 .pe-ratio {
-  background-color: #19b5fe;
+  background-color: #556e87;
 }
 
-.price {
-  background-color: #f1c40f;
-}
+/*.price {
+  background-color: #ff9618;
+}*/
 
 .chat {
-  background-color: white;
-  color: black;
+  background-color: #fc797a;
+  color: white;
   overflow: scroll;
 }
 
@@ -130,7 +137,7 @@ li:hover {
 #message-input {
   width: 90%;
   height: 20px;
-  font-size: 12px;
+  font-size: 16px;
   position: relative;
   bottom: 20px;
 }
@@ -138,22 +145,23 @@ li:hover {
 #messages > li {
   padding: 5px 10px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 16px;
   text-align: left;
-  background-color: #e74c3c;
   color: white;
+  word-wrap: break-word;
 }
 
-#messages > li:nth-child(odd) {
-  background: blue;
-}
+/*#messages > li:nth-child(odd) {
+  text-align: right;
+}*/
 
 .graph {
   box-sizing: border-box;
   width: 610px;
   height: 360px;
   border: 1px solid gray;
-  background: #000;
+  background: #fbb44c;
+  font-weight: bold;
 }
 
 .data {
