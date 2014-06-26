@@ -8,6 +8,7 @@ $(function() {
   socket.on('chat message', function(msg) {
     $('#messages').prepend($('<li>').text(formatAMPM(new Date()) + ": " + msg));
   });
+
   function formatAMPM(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();

@@ -10,6 +10,7 @@ $(function() {
   }).done(function(data) {
     price = data.query.results.quote.AskRealtime;
     dataPoints = [price, price, price, price, price, price, price, price, price, price];
+
     function getPrice() {
       var res = [];
       for (var i = 0; i < dataPoints.length; ++i) {
