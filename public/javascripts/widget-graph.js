@@ -18,20 +18,39 @@ $(function() {
       }
       return res;
     }
+    //More plot formatting can be done by visiting here: https://flot.googlecode.com/svn/trunk/API.txt
     var plot = $.plot(".data", [getPrice()], {
       series: {
         shadowSize: 0,
-        color: "white"
+        color: "white",
+        lines: {
+          show: true,
+          fill: false,
+          fillColor: "rgba(255, 255, 255, 0.8)"
+        },
+        points: {
+          show: true,
+          fill: true,
+          line: true
+        }
       },
       yaxis: {
         min: price * 0.99,
-        max: price * 1.01
+        max: price * 1.01,
+        tickDecimals: 1,
+        tickSize: .5,
+        color: "grey",
+        tickColor: "grey",
+        font: {
+          size: 20,
+        }
       },
       xaxis: {
         show: false
       },
       grid: {
-        color: "#fbb44c"
+        color: "#fbb44c",
+        hoverable: true
       }
     });
     var updateInterval = 1000;
