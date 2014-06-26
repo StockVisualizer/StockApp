@@ -9,6 +9,7 @@ $(function() {
 
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     $(".close").style.display = "none";
+    $('.close:hover').style.display = "none";
   }
 
   $('.close').on('click', function(e) {
