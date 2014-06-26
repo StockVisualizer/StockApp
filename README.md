@@ -1,21 +1,27 @@
-StockApp
-========
+#StockApp
 
-A Node.js app for users to visualize stock data
+*StockApp is a a Node.js app for users to visualize stock data
 
-1) Clone the Repo
+*It uses the Yahoo Finance API for stock data, gridster for managing the widgets on a grid, and flot for the price graph.
+
+![](http://i.imgur.com/1slrTAY.png)
+
+1) If you would like to run StockApp locally, just clone this repo:
+
 ```
-git clone  https://github.com/StockVisualizer/StockVisualizer.git
+git clone https://github.com/stevenmiller888/StockApp.git
 ```
 
-2) Change your directory to StockVisualizer and install required modules
+2) Change your directory to StockApp and install required modules
+
 ```
-cd StockVisualizer && npm install
+cd StockApp && npm install
 ```
 
 3) Start the server!
+
 ```
 npm start
 ```
 
-4) Point your browser to http://localhost:3030/ and have fun!
+4) Point your browser to http://localhost:3000/ and have fun!
