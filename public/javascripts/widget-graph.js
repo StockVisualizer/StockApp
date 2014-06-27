@@ -1,3 +1,8 @@
+/*
+  Set 20 data points to 0 for use in plotting the graph. Declare the plot
+  variable, which stores all of the information about our graph, like the line
+  color, the axes, etc. Also, set the update interval.
+*/
 var dataPoints = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var totalPoints = 20;
 var flip = false;

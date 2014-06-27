@@ -1,3 +1,8 @@
+/* 
+  Declare a gauge variable for the volume widget. Set all of the options, like
+  the color of the pointer, the fill, etc. Also, set the target, max value, and
+  animation speed of the gauge. 
+*/
 var gauge;
 $(function() {
   var opts = {

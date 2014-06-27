@@ -1,4 +1,8 @@
 $(function() {
+  /* 
+    ZeroClipboard copies text to the clipboard with an invisible Adobe Flash
+    movie and a JavaScript interface.
+  */
   var client = new ZeroClipboard($(".copy-button"));
 
   client.on("ready", function(readyEvent) {
@@ -7,6 +11,10 @@ $(function() {
     });
   });
 
+  /* 
+    If the user submits a new ticker, then prevent refresh and set the symbol
+    to what the user typed in.
+  */
   $('.title-form').on('submit', function(e) {
     e.preventDefault();
     symbol = $('.title-input').val();
@@ -17,6 +25,11 @@ $(function() {
     // New ticker
     flip = true;
   });
+  /* 
+    If the user double clicks on the widget, the temporarily disable dragging,
+    add the css class flipped, and when the mouse leaves the widget area, then
+    remove the class and reenable dragging.
+  */
   $('.flip').dblclick(function() {
     $(".gridster ul").gridster().data('gridster').draggable().disable();
     $(this).find('.card').addClass('flipped').mouseleave(function() {

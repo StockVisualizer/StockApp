@@ -1,3 +1,7 @@
+/*
+  CSS for the major UI elements
+*/
+
 body {
   background-color: black;
   font: 14px 'Helvetica Neue', sans-serif;
@@ -18,7 +22,7 @@ ul {
   margin: 0;
 }
 
-/* Flipping the widgets */
+/* CSS for flipping the widgets */
 .flip {
   -webkit-perspective: 800;
 }
@@ -50,6 +54,9 @@ ul {
   text-align: left;
 }
 
+/*
+  CSS for the copy button
+*/
 .copy-button {
   position: relative;
   top: 150px;
@@ -82,6 +89,9 @@ ul {
   cursor: pointer;
 }
 
+/*
+  CSS for the headers, values, and inputs
+*/
 .title-h1 {
   position: relative;
   top: 40px;
@@ -182,6 +192,9 @@ li:hover {
   background-color: #556e87;
 }
 
+/*
+  CSS for the chat widget
+*/
 .chat {
   background-color: #fc797a;
   color: white;
@@ -211,10 +224,9 @@ li:hover {
   word-wrap: break-word;
 }
 
-/*#messages > li:nth-child(odd) {
-  text-align: right;
-}*/
-
+/*
+  CSS for the graph widget
+*/
 .graph {
   box-sizing: border-box;
   width: 610px;
