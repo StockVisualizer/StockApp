@@ -3,8 +3,8 @@
   variable, which stores all of the information about our graph, like the line
   color, the axes, etc. Also, set the update interval.
 */
-var dataPoints = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var totalPoints = 20;
+var dataPoints = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var totalPoints = 10;
 var flip = false;
 $(function() {
   function getPrice() {
