@@ -4,11 +4,11 @@ $(function() {
   time = new Date().toString();
   day = time.substr(0, 3);
   // If the market is closed, then do not grab stock data from Yahoo
-  if (day != "Sat" && day != "Sun") {
+  // if (day != "Sat" && day != "Sun") {
     current_time = new Date().toString().substr(16, 8);
     current_time_formatted = parseInt(current_time.substr(0, 2) + current_time.substr(3, 2) + current_time.substr(6, 5));
     // The market is open from 9:30 AM to 4:00 PM Eastern Standard Time
-    if (current_time_formatted > 93000 && current_time_formatted < 160000) {
+    // if (current_time_formatted > 93000 && current_time_formatted < 160000) {
       setInterval(function() {
         var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20%28%22" + symbol + "%22%29%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
         $.ajax({
@@ -70,26 +70,26 @@ $(function() {
           }
         });
       }, 1000);
-    } else {
-      $('.title_main-h1').hide();
-      $(".market-status").html("Market is closed");
-      $('.market-cap').hide();
-      $('.volume').hide();
-      $('.title_main').append('<h6>(Please come back between 9:30 AM and 4:00 PM EST)</h6>');
-      $('.price').hide();
-      $('.pe-ratio').hide();
-      $('.title_main-input').hide();
-      $('.chat').hide();
-    }
-  } else {
-    $('.title_main-h1').hide();
-    $(".market-status").html("Market is closed");
-    $('.title_main').append('<h6>Please come back between 9:30 AM and 4:00 PM EST</h6>');
-    $('.market-cap').hide();
-    $('.volume').hide();
-    $('.price').hide();
-    $('.pe-ratio').hide();
-    $('.title_main-input').hide();
-    $('.chat').hide();
-  }
+  //   } else {
+  //     $('.title_main-h1').hide();
+  //     $(".market-status").html("Market is closed");
+  //     $('.market-cap').hide();
+  //     $('.volume').hide();
+  //     $('.title_main').append('<h6>(Please come back between 9:30 AM and 4:00 PM EST)</h6>');
+  //     $('.price').hide();
+  //     $('.pe-ratio').hide();
+  //     $('.title_main-input').hide();
+  //     $('.chat').hide();
+  //   }
+  // } else {
+  //   $('.title_main-h1').hide();
+  //   $(".market-status").html("Market is closed");
+  //   $('.title_main').append('<h6>Please come back between 9:30 AM and 4:00 PM EST</h6>');
+  //   $('.market-cap').hide();
+  //   $('.volume').hide();
+  //   $('.price').hide();
+  //   $('.pe-ratio').hide();
+  //   $('.title_main-input').hide();
+  //   $('.chat').hide();
+  // }
 });

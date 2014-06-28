@@ -24,11 +24,11 @@ $(document).ready(function() {
   time = new Date().toString();
   day = time.substr(0, 3);
   // If the market is closed, then do not grab stock data from Yahoo
-  if (day != "Sat" && day != "Sun") {
+  // if (day != "Sat" && day != "Sun") {
     current_time = new Date().toString().substr(16, 8);
     current_time_formatted = parseInt(current_time.substr(0, 2) + current_time.substr(3, 2) + current_time.substr(6, 5));
     // The market is open from 9:30 AM to 4:00 PM Eastern Standard Time
-    if (current_time_formatted > 93000 && current_time_formatted < 160000) {
+    // if (current_time_formatted > 93000 && current_time_formatted < 160000) {
       function getPrice() {
         if (prices.length > 10) {
           prices.splice(0, 1);
@@ -73,7 +73,7 @@ $(document).ready(function() {
         setTimeout(update, updateInterval);
       }
       update();
-    }
-  }
+    // }
+  // }
 
 });
