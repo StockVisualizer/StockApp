@@ -3,63 +3,71 @@
   variable, which stores all of the information about our graph, like the line
   color, the axes, etc. Also, set the update interval.
 */
-var dataPoints = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var totalPoints = 10;
-var flip = false;
-$(function() {
-  function getPrice() {
-    var res = [];
-    for (var i = 0; i < dataPoints.length; ++i) {
-      res.push([i, dataPoints[i]]);
-    }
-    return res;
-  }
-  //More plot formatting can be done by visiting here: https://flot.googlecode.com/svn/trunk/API.txt
-  var plot = $.plot(".data", [getPrice()], {
+var plot;
+var prices = [];
+$(document).ready(function() {
+
+  plot = $.plot("#chart", [getPrice()], {
     series: {
-      shadowSize: 0,
-      color: "white",
-      lines: {
-        show: true,
-        fill: false,
-        fillColor: "rgba(255, 255, 255, 0.8)"
-      },
-      points: {
-        show: true,
-        fill: true,
-        line: true
-      }
+      shadowSize: 0 // Drawing is faster without shadows
     },
     yaxis: {
-      min: 90 * 0.99,
-      max: 94 * 1.01,
-      tickDecimals: 1,
-      tickSize: 0.5,
-      color: "grey",
-      tickColor: "grey",
-      font: {
-        size: 20,
-      }
+      min: 0,
+      max: 100
     },
     xaxis: {
       show: false
     },
     grid: {
-      color: "#fbb44c",
-      hoverable: true
+      color: '#f39c12'
     }
   });
+
+  function getPrice() {
+    if (prices.length > 10) {
+      prices.splice(0, 1);
+    }
+    var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20%28%22" + symbol + "%22%29%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
+    $.ajax({
+      type: 'get',
+      url: url
+    }).done(function(data) {
+      var price = data.query.results.quote.AskRealtime;
+      if (price === undefined || price === "0.00") {
+        price = data.query.results.quote.BidRealtime;
+      }
+      if (prices.length === 0) {
+        plot.getOptions().yaxes[0].max = price * 1.1;
+        plot.getOptions().yaxes[0].min = price * 0.9;
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+        prices.push(price);
+      } else {
+        prices.push(price);
+      }
+    });
+    var res = [];
+    for (var i = 0; i < prices.length; ++i) {
+      res.push([i, prices[i]]);
+    }
+    return res;
+  }
+
   var updateInterval = 1000;
 
   function update() {
-    if (flip === true) {
-      plot.getOptions().yaxes[0].min = dataPoints[dataPoints.length - 1] * 0.99;
-      plot.getOptions().yaxes[0].max = dataPoints[dataPoints.length - 1] * 1.01;
-    }
     plot.setData([getPrice()]);
     plot.setupGrid();
     plot.draw();
     setTimeout(update, updateInterval);
   }
   update();
+
 });

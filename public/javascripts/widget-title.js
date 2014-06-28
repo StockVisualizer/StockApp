@@ -15,12 +15,14 @@ $(function() {
     If the user submits a new ticker, then prevent refresh and set the symbol
     to what the user typed in.
   */
-  $('.title-form').on('submit', function(e) {
+  $('.title_main-form').on('submit', function(e) {
+    prices = [];
+    plot.setupGrid();
     e.preventDefault();
-    symbol = $('.title-input').val();
-    $('.title-input').val('');
+    symbol = $('.title_main-input').val();
+    $('.title_main-input').val('');
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-      $('.title-input').blur();
+      $('.title_main-input').blur();
     }
     // New ticker
     flip = true;

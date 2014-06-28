@@ -22,6 +22,12 @@ ul {
   margin: 0;
 }
 
+#chart {
+  height: 360px;
+  width: 610px;
+  background-color: #f39c12;
+}
+
 /* CSS for flipping the widgets */
 .flip {
   -webkit-perspective: 800;
@@ -92,10 +98,10 @@ ul {
 /*
   CSS for the headers, values, and inputs
 */
-.title-h1 {
+.title_main-h1 {
   position: relative;
   top: 40px;
-  font-size: 72px;
+  font-size: 52px;
   opacity: 0.5;
 }
 
@@ -119,9 +125,12 @@ ul {
 
 .price-h1 {
   position: relative;
-  bottom: 360px;
+  bottom: 330px;
+  left: 240px;
   font-size: 48px;
   opacity: 0.7;
+  color: white;
+  font-weight: bold;
 }
 
 .chat-h1 {
@@ -154,7 +163,7 @@ li:hover {
   cursor: pointer;
 }
 
-.title-input {
+.title_main-input {
   position: relative;
   top: 20px;
   width: 120px;
@@ -164,11 +173,10 @@ li:hover {
   font-weight: bold;
 }
 
-.title,
+.title_main,
 .market-cap,
 .volume,
 .pe-ratio,
-.price,
 .chat {
   position: absolute;
   color: white;
@@ -176,7 +184,7 @@ li:hover {
   font-size: 32px;
 }
 
-.title {
+.title_main {
   background-color: #3a98d8;
 }
 
@@ -222,22 +230,4 @@ li:hover {
   text-align: left;
   color: white;
   word-wrap: break-word;
-}
-
-/*
-  CSS for the graph widget
-*/
-.graph {
-  box-sizing: border-box;
-  width: 610px;
-  height: 360px;
-  background: #fbb44c;
-  font-weight: bold;
-}
-
-.data {
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  line-height: 1.2em;
 }
