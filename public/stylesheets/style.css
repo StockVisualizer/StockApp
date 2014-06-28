@@ -114,13 +114,18 @@ ul {
 .market-status {
   position: relative;
   top: 50px;
-  font-size: 18px;
+  font-size: 48px;
 }
 
 .market-cap-h1,
 .pe-ratio-h1 {
   font-size: 48px;
   opacity: 0.7;
+}
+
+h6 {
+  color: black;
+  font-size: 12px;
 }
 
 .price-h1 {
