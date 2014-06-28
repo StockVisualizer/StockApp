@@ -124,9 +124,10 @@ ul {
 }
 
 .price-h1 {
-  position: relative;
-  bottom: 330px;
+  position: absolute;
+  top: 30px;
   left: 240px;
+  z-index: 1;
   font-size: 48px;
   opacity: 0.7;
   color: white;

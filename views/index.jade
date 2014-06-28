@@ -34,8 +34,8 @@ block content
       li(class="price flip", data-row="1", data-col="1", data-sizex="2", data-sizey="1")
         div(class="card")
           div(class="face front")
+            div(class="price-h1") Price
             div(id="chart")
-            //- div(class="price-h1") Price
           div(class="face back")
         //- button(class="copy-button" data-clipboard-text="&lt;style type=text/css media=screen&gt;.market-cap{position:absolute;color:#FFF;text-align:center;font-size:32px;font-family:'Helvetica Neue', sans-serif;width:300px;height:360px;background-color:#2abb9b}.market-cap-h1{font-size:48px;opacity:0.7}.market-cap-value{position:relative;bottom:20px;right:5px;font-size:72px;overflow:hidden}&lt;/style&gt;&lt;div class='market-cap'&gt; &lt;h1 class='market-cap-h1'&gt;Market Cap&lt;/h1&gt; &lt;h3 class='market-cap-value'&gt;&lt;/h3&gt;&lt;/div&gt;&lt;script src='https://code.jquery.com/jquery-1.11.0.min.js'&gt;&lt;/script&gt;&lt;script&gt;symbol='AAPL';var url='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20%28%22'+symbol+'%22%29%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json';$.ajax({type:'get',url:url}).done(function(a){market_cap_string=a.query.results.quote.MarketCapitalization;market_cap_float=parseInt(market_cap_string.substr(0,market_cap_string.length-1));market_cap=String(market_cap_float)+market_cap_string.substr(market_cap_string.length-1);$('.market-cap-value').html('$'+market_cap)});&lt;/script&gt;") Copy
       li(class="chat", data-row="1", data-col="1", data-sizex="1", data-sizey="2")
