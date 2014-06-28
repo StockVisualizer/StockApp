@@ -22,11 +22,11 @@ ul {
   margin: 0;
 }
 
-/*#chart {
+#chart {
   height: 360px;
   width: 610px;
   background-color: #f39c12;
-}*/
+}
 
 /* CSS for flipping the widgets */
 .flip {
