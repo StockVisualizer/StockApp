@@ -6,7 +6,6 @@
 var plot;
 var prices = [];
 $(document).ready(function() {
-
   plot = $.plot("#chart", [getPrice()], {
     series: {
       shadowSize: 0 // Drawing is faster without shadows
@@ -22,7 +21,6 @@ $(document).ready(function() {
       color: '#f39c12'
     }
   });
-
   time = new Date().toString();
   day = time.substr(0, 3);
   // If the market is closed, then do not grab stock data from Yahoo
@@ -67,9 +65,7 @@ $(document).ready(function() {
         }
         return res;
       }
-
       var updateInterval = 1000;
-
       function update() {
         plot.setData([getPrice()]);
         plot.setupGrid();

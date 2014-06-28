@@ -54,7 +54,6 @@ $(function() {
             $('.title_main-h1').html(company_name);
           }
           $('.updated').html("Last updated at " + formatAMPM(new Date()));
-
           function formatAMPM(date) {
             var hours = date.getHours();
             var minutes = date.getMinutes();

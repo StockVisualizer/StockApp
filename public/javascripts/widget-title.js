@@ -21,9 +21,9 @@ $(function() {
     e.preventDefault();
     symbol = $('.title_main-input').val();
     $('.title_main-input').val('');
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-      $('.title_main-input').blur();
-    }
+    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    //   $('.title_main-input').blur();
+    // }
     // New ticker
     flip = true;
   });
