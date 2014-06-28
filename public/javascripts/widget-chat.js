@@ -1,14 +1,24 @@
 $(function() {
+  // SocketIO instance
   var socket = io();
+  /* 
+    When a message is sent in the chat form, send the message to the server, 
+    reset the form, and return false.
+  */
   $('.message-form').on('submit', function() {
     socket.emit('chat message', $('#message-input').val());
     $('#message-input').val('');
     return false;
   });
+  /*
+    When a message is received from the server, prepend the message as an li
+    to the messages list, and also put the time.
+  */
   socket.on('chat message', function(msg) {
     $('#messages').prepend($('<li>').text(formatAMPM(new Date()) + ": " + msg));
   });
 
+  // Format the time to 12 hour format
   function formatAMPM(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
